@@ -1,0 +1,30 @@
+body {
+    padding-top: 50px;
+}
+
+#data
+{
+    height: 100%;
+}
+
+.calories_exceeded
+{
+    background: #ff8080;
+}
+
+.calories_ok
+{
+    background: #c2efc2;
+}
+
+.statistics_calories_ok
+{
+    color: #006622;
+    font-weight: bold;
+}
+
+.statistics_calories_exceeded
+{
+    color: #990000;
+    font-weight: bold;
+}

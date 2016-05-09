@@ -1,0 +1,131 @@
+24.12.2015 17:14 - 1.5h
+- Meallist for user in admin view displays meal dates too
+- Refactoring user endpoint code to be more cleaner
+- User tests are now up to date with current api (auth no longer returns user id, returns whole user instead)
+
+24.12.2015 12:08 - 0.5h
+- Added data verification unit tests (date/time/text/calories)
+- Improved date/time verification functions in meal endpoint
+
+24.12.2015 11:25 - 0.125h
+- Added document downloading functionality (/docs endpoint)
+
+23.12.2015 20:55 - 2.5h
+- Refactored page.js main redirect function (functions are chosen via map -> callback instead of lengthy if checks)
+- Fixed bug when deleting meal in other users meal list redirected to main page
+- Enter Key support on data entry pages (action is performed on enter press)
+- Simple Date entry filter
+- IE10 support added
+- Manual App Testing
+
+22.12.2015 21:45 - 1h
+- Added documentation
+- /list/{owner_id} endpoint renamed to /filter/{owner_id}
+- /list/{owner_id}/all renamed to /list/{owner_id}
+
+21.12.2015 23:03 - 1h
+- Restore password endpoint added
+- GUI supports password restoration
+
+21.12.2015 19:58 - 0.25h
+- Added possibility to change password in UI
+- Administrator can change passwords of other users
+- Adjusted user test accordingly
+
+21.12.2015 19:30 - 0.5h
+- Admin can add meals for other users
+- Adjusted tests automatically for this change (owner id is required when adding meal)
+
+20.12.2015 22:30 - 1.5h
+- Admin meal list for the user is implemented
+- Admin can edit / delete user meals via GUI
+- Added simple 'about' page
+
+20.12.2015 16:35 - 4.5h
+- Implemented Userlist
+- Admins can edit / delete users
+- UI Marks selected view in top menu
+- Added Logout endpoint (nullifies relevant auth cookies on user pc)
+- Removed exposed error message from failed meal list request
+
+19.12.2015 18:50 - 0.25h
+- Added test for time comparison
+
+19.12.2015 17:52 - 0.25h
+- GUI: Dates in statistics are being sorted in descending order
+- GUI: Time on maing page and in statistics is being sorted in descending order
+
+19.12.2015 17:22 - 0.5h
+- GUI: green color of the day if calories are lesser than or equal to normal, red otherwise
+- GUI: Green color of the day in statistics if calories are lesser than or equal to normal, red otherwise
+- GUI: Added daily calories display on top
+
+19.12.2015 12:37 - 1.5h
+- GUI: Added filter to select data by time / date 
+- Fixed API search by time
+
+19.12.2015 10:44 - 1.5h
+- GUI: meal editing added
+- GUI: meal removal added
+- Api requests return 404 by default now if endpoint was not recognized (or some error occured during execution)
+- Fixed meal update bug (value not returned properly)
+
+18.12.2015 22:20 - 0.75h
+- Added settings screen in GUI (user can change name / calories)
+- Added 'delete me' function in GUI
+- Sanitized meal output on update
+- Changed user record is now being given back on user update
+
+18.12.2015 21:17 - 4.5h
+- Changed meal add / lookup: time is passed in 24-hour leading zero format (i.e. 13:05)
+- Changed meal add / lookup: date is passed in d.m.Y leading zero format (i.e. 17.12.2015)
+- Added meal addition from APP
+- Main page shows current meals
+- Modified rest meal test accordingly
+
+16.12.2015 - 22:21 1.5h
+- Added the list meals function
+- Added list meals test
+
+16.12.2015 - 20:17 2.5h
+- Changed .htaccess templates for CORS headers
+- Added simple GUI html (index.html) that loads forms with data received from API
+  - Added basic renderer php script (renderer.php)
+  - Added basic Login / Register forms for GuiCalorieAPP
+  - Added "main" window with basic menu
+
+14.12.2015 - 21:50 - 0.5h
+- Added meal update functionality
+- Added relevant tests
+
+14.12.2015 - 21:17 - 0.5h
+- Added meal get functionality
+- Added meal delete functionality
+- Added meal get/delete test
+
+14.12.2015 - 20:13 - 1.5h
+- Added meal endpoint (supports meal creation only for now)
+- Meals are being deleted automatically when user is deleted
+- Added meal creation tests 
+
+
+14.12.2015 - 0.5h
+- Added extra check for user DELETION (moderator can only delete normal users now)
+- Added PUT user support - changes max calorie amount / sets new name / sets new role (if used by admin)
+
+13.12.2015 - 21:20 - 0.5h
+- Implemented Delete method for users
+- Added create - auth - get - delete user test
+- User auth now returns user id as parameter
+
+13.12.2015 - 20:40 - 2h
+- Added user authentication
+- Added GET user method
+- User authentication tests added
+
+13.12.2015 - 17:30 - 1.5h
+- Added user creation through REST
+- Improved Endpoint Parsing
+
+13.12.2015 - 10:15 - 2h
+- Basic Endpoint Parsing
